@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay">
+        <form   action="http://localhost:3000/emailapp" method="post" onsubmit="return validate(); ">
+           <div class="con">
+           <header class="head-form">
+              <h2>WELCOME TO EMAIL APP</h2>
+              <p>Enter your email here:</p>
+           </header>
+           <br>
+           <div class="field-set">
+                 <input class="form-input" id="email" type="text"  required name="email">
+                 <span id="eerror"></span>
+              <br>
+              <button class="log-in" onclick="return validate(); "> Submit </button>
+              <br>
+           </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
