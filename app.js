@@ -1,13 +1,26 @@
 const express = require('express');
-//const bodyparser = require('body-parser');
+const bodyparser = require('body-parser');
 const nodemailer = require('nodemailer');
+//const path = require ('path');
+//const w= require('./welcome.html');
 
 const app = express();
-
+app.use(bodyparser.urlencoded({extended:true}));
+app.use(express.json());
+//app.use('welcome.html');
 
 var port = process.env.PORT || 3000;
+app.get('/',function(req,res){
+console.log("hi");
+    res.sendFile(__dirname+'/welcome.html');
+    
+});
 
-
+app.get('/home',function(req,res){
+   // console.log("hi");
+        res.sendFile(__dirname+'/home.html');
+        
+    });
 
 app.post('/emailapp', async (req, res) => {
     try {
