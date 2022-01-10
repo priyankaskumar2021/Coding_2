@@ -16,7 +16,7 @@ console.log("hi");
     
 });
 
-app.get('/home',function(req,res){
+app.post('/home',function(req,res){
    // console.log("hi");
         res.sendFile(__dirname+'/home.html');
         
